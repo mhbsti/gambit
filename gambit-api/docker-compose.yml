@@ -10,11 +10,7 @@ services:
     environment:
       SERVICE_NAME: app
       SERVICE_TAGS: dev
-      DB_HOST: db
-      DB_DATABASE: laravel
-      DB_USERNAME: root
-      DB_PASSWORD: root
-      REDIS_HOST: redis
+      
     working_dir: /var/www
     volumes:
        - ./:/var/www
@@ -28,7 +24,7 @@ services:
     restart: unless-stopped
     tty: true
     ports:
-      - "80:80"
+      - "8090:80"
       - "443:443"
     volumes:
       - ./:/var/www

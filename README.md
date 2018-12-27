@@ -11,6 +11,7 @@
         `docker run --rm -v $(pwd):/app composer install`
     - Definir permissões para o seu usuário:
         `sudo chown -R $USER:$USER gambit-api`
+    - crie o .env
     - Subir containers:
         `docker-compose up`
     - Em um novo terminal execute:
