@@ -32,11 +32,7 @@ create table atividade
   trello_id         varchar(255) null,
   trello_datat      json         null,
   constraint atividade_trello_id_uindex
-    unique (trello_id),
-  constraint atividade_analista_id_fk
-    foreign key (analista_id) references analista (id),
-  constraint atividade_dev_id_fk
-    foreign key (dev_id) references dev (id)
+    unique (trello_id)
 );
 
 create table dev
