@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Http\Request;
+Use App\Models\Analista;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +17,9 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('analistas', 'AnalistaController@index');
+Route::get('analistas/{id}', 'AnalistaController@show');
+Route::post('analistas', 'AnalistaController@store');
+Route::put('analistas/{id}', 'AnalistaController@update');
+Route::delete('analistas/{id}', 'AnalistaController@delete');
